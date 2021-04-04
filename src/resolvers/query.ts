@@ -1,5 +1,5 @@
 const Query = {
-  hello: (name) => `👋 ${name}`,
+	hello: (_, { name }) => `👋 ${name}`,
 };
 
 export { Query as default };

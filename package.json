@@ -8,7 +8,8 @@
 		"lint": "eslint  '**/*.ts'",
 		"lint:fix": "eslint '**/*.ts' --fix",
 		"preety": "prettier --write --config .prettierrc.json '**/*.ts'",
-		"analyze-code": "npm run preety && npm run lint:fix && npm run lint"
+		"analyze-code": "npm run preety && npm run lint:fix && npm run lint",
+		"codegen": "graphql-codegen --project database"
 	},
 	"husky": {
 		"hooks": {
@@ -26,6 +27,9 @@
 		"graphql-yoga": "^1.18.3"
 	},
 	"devDependencies": {
+		"@graphql-cli/codegen": "^1.17.22",
+		"@graphql-codegen/schema-ast": "^1.18.1",
+		"@graphql-codegen/typescript-resolvers": "^1.19.0",
 		"eslint": "^7.23.0",
 		"eslint-plugin-import": "^2.22.1",
 		"husky": "^6.0.0",

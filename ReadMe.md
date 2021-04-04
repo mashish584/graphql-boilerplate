@@ -59,3 +59,9 @@ migrations: true
 2.  Run `docker-compose up -d`
 3.  Push your updated prisma scheme to db
     `npx prisma db push ---preview-feature`
+
+## Generate types and schema for your api's with graphql-codegen
+
+1.  Update sample.env endpoint & secret
+2.  Run `yarn run codegen`
+3.  Generated types and scheme will be available inside `src/generated`

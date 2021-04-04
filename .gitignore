@@ -3,6 +3,7 @@ node_modules/
 docker-compose.yml
 yarn-error.log
 dist/
+src/generated
 
 # OS generated files
 .DS_Store
