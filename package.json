@@ -9,17 +9,8 @@
 		"lint:fix": "eslint '**/*.ts' --fix",
 		"preety": "prettier --write --config .prettierrc.json '**/*.ts'",
 		"analyze-code": "npm run preety && npm run lint:fix && npm run lint",
-		"codegen": "graphql-codegen --project database"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	},
-	"lint-staged": {
-		"*.{ts,tsx}": [
-			"npm run analyze-code"
-		]
+		"codegen": "graphql-codegen --project database",
+		"prepare": "husky install && npx husky add .husky/pre-commit 'npm run analyze-code'"
 	},
 	"dependencies": {
 		"@prisma/client": "2.20.1",
